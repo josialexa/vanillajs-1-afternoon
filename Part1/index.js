@@ -1,10 +1,18 @@
 console.log('hello');
 
 const play = (boxID) => {
-    let curPlayerBox = document.getElementById('player');
-    let curPlayer = curPlayerBox.innerText;
+    let curPlayerSpan = document.getElementById('player');
+    let curPlayer = curPlayerSpan.innerText;
+    console.log(curPlayer);
     let clickedBox = document.getElementById(boxID);
     
     clickedBox.innerText = curPlayer;
-    curPlayerBox.innterText = curPlayer == 'X' ? 'O' : 'X';
+    curPlayerSpan.innerText = curPlayer == 'X' ? 'O' : 'X';
+    // if(curPlayer == 'X') {
+    //     console.log('its X');
+    //     curPlayerSpan.innerText = 'O';
+    // } else {
+    //     console.log('its not X');
+    //     curPlayerSpan.innerText = 'X';
+    // }
 };
