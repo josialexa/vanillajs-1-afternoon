@@ -1,6 +1,10 @@
 console.log('hello');
 
-const play = () => {
-    let curPlayer = document.getElementById('player');
-    curPlayer.innerText = curPlayer.innerText == 'X' ? 'O' : 'X';
+const play = (boxID) => {
+    let curPlayerBox = document.getElementById('player');
+    let curPlayer = curPlayerBox.innerText;
+    let clickedBox = document.getElementById(boxID);
+    
+    clickedBox.innerText = curPlayer;
+    curPlayerBox.innterText = curPlayer == 'X' ? 'O' : 'X';
 };
